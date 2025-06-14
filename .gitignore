@@ -53,6 +53,7 @@ audiobook_projects/
 speakers/
 source/
 audiobook_config.json
+archive/
 
 # OS generated files
 .DS_Store
