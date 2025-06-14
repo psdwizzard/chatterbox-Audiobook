@@ -15,7 +15,9 @@
 ./launch_audiobook.bat
 ```
 
-### 3. CUDA Issue Fix (If Needed)
+### 3. Audio Issue Fixes (If Needed)
+
+#### CUDA Issue Fix
 If you encounter CUDA assertion errors during generation, install the patched version:
 ```bash
 # Activate your virtual environment first
@@ -25,11 +27,25 @@ venv\Scripts\activate.bat
 pip install --force-reinstall --no-cache-dir "chatterbox-tts @ git+https://github.com/fakerybakery/better-chatterbox@fix-cuda-issue"
 ```
 
+#### Additional Audio Fixes
+- **Volume Normalization**: Professional audio leveling system now included
+- **Audio Artifacts**: Smart cleanup removes unwanted silence and audio glitches
+- **Multi-Voice Stability**: Enhanced processing for character dialogue generation
+- **Memory Management**: Improved handling of large audiobook projects
+
 The web interface will open automatically in your browser at `http://localhost:7860`
 
 ---
 
 ## ✨ Features
+
+### 🔧 **Recent Improvements** ⭐ *UPDATED*
+- **Enhanced Audio Processing**: Improved volume normalization and artifact removal
+- **CUDA Stability**: Fixed GPU processing issues for extended generation sessions  
+- **Project Organization**: Streamlined file structure with archive system for better maintenance
+- **Multi-Voice Enhancements**: Better handling of character dialogue and voice consistency
+- **Professional Volume Standards**: Industry-standard audio leveling presets
+- **Smart Cleanup Tools**: Automated removal of unwanted audio artifacts and silence
 
 ### 📚 **Audiobook Creation**
 - **Single Voice**: Generate entire audiobooks with one consistent voice
@@ -131,13 +147,29 @@ The web interface will open automatically in your browser at `http://localhost:7
 
 ---
 
-## ⚠️ Known Issues
+## ⚠️ Known Issues & Troubleshooting
 
 ### **Multi-Voice Generation**
 - Short sentences or sections may occasionally cause issues during multi-voice generation
 - This is a limitation of the underlying TTS models rather than the implementation
 - **Workaround**: Use longer, more detailed sentences for better stability
 - Single-voice generation is not affected by this issue
+
+### **Audio Quality Issues**
+- **Low Volume**: Use the Volume Normalization system to set professional audio levels
+- **Inconsistent Volume**: Enable volume normalization for all voices in multi-character projects
+- **Audio Artifacts**: The smart cleanup system automatically removes silence and glitches
+- **Distorted Audio**: Check that target volume levels aren't set too high (stay within -14 to -23 dB range)
+
+### **CUDA/GPU Issues**
+- **CUDA Assertion Errors**: Install the patched version using the installation command above
+- **Out of Memory**: Reduce batch size or use CPU processing for very large projects
+- **GPU Not Detected**: Ensure CUDA drivers are properly installed and compatible
+
+### **Performance Issues**
+- **Slow Processing**: Enable GPU acceleration if available, or process in smaller chunks
+- **Memory Errors**: Close other applications and ensure sufficient RAM (8GB+ recommended)
+- **Long Generation Times**: Use the batch processing feature for better efficiency
 
 ---
 
